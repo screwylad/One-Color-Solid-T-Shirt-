@@ -214,16 +214,17 @@
             }
         }
         
-        /* Hero section - optimized with slideshow */
+        /* Hero section - optimized with smooth cross-fade slideshow */
         .hero-section {
             background-size: cover;
             background-position: center;
             min-height: 500px;
             position: relative;
             overflow: hidden;
+            background-color: #1a1a1a;
         }
         
-        /* Slideshow backgrounds */
+        /* Slideshow layer 1 (bottom) */
         .hero-section::before {
             content: '';
             position: absolute;
@@ -233,10 +234,11 @@
             height: 100%;
             background-size: cover;
             background-position: center;
-            animation: slideshow 12s infinite;
+            animation: slideshow1 18s infinite;
             z-index: 0;
         }
         
+        /* Slideshow layer 2 (top - for cross-fade) */
         .hero-section::after {
             content: '';
             position: absolute;
@@ -244,58 +246,76 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: linear-gradient(135deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4));
+            background-size: cover;
+            background-position: center;
+            animation: slideshow2 18s infinite;
             z-index: 1;
+        }
+        
+        /* Dark overlay for text readability */
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4));
+            z-index: 2;
         }
         
         .hero-section > * {
             position: relative;
-            z-index: 2;
+            z-index: 3;
         }
         
-        @keyframes slideshow {
+        /* Smooth cross-fade animation for layer 1 (bottom) */
+        @keyframes slideshow1 {
             0% {
                 background-image: url('images/IMG-20251008-WA0001.jpg');
+            }
+            33.33% {
+                background-image: url('images/IMG-20251008-WA0001.jpg');
+            }
+            33.34% {
+                background-image: url('images/IMG-20251008-WA0007.jpg');
+            }
+            66.66% {
+                background-image: url('images/IMG-20251008-WA0007.jpg');
+            }
+            66.67% {
+                background-image: url('images/IMG-20251008-WA0015.jpg');
+            }
+            100% {
+                background-image: url('images/IMG-20251008-WA0015.jpg');
+            }
+        }
+        
+        /* Smooth cross-fade animation for layer 2 (top) - offset timing */
+        @keyframes slideshow2 {
+            0% {
+                background-image: url('images/IMG-20251008-WA0015.jpg');
+                opacity: 0;
+            }
+            30% {
+                background-image: url('images/IMG-20251008-WA0015.jpg');
+                opacity: 0;
+            }
+            33.33% {
                 opacity: 1;
             }
-            25% {
+            63.33% {
                 background-image: url('images/IMG-20251008-WA0001.jpg');
                 opacity: 1;
             }
-            30% {
+            66.66% {
                 opacity: 0;
             }
-            33% {
+            96.66% {
                 background-image: url('images/IMG-20251008-WA0007.jpg');
-                opacity: 0;
-            }
-            35% {
-                opacity: 1;
-            }
-            58% {
-                background-image: url('images/IMG-20251008-WA0007.jpg');
-                opacity: 1;
-            }
-            63% {
-                opacity: 0;
-            }
-            66% {
-                background-image: url('images/IMG-20251008-WA0015.jpg');
-                opacity: 0;
-            }
-            68% {
-                opacity: 1;
-            }
-            91% {
-                background-image: url('images/IMG-20251008-WA0015.jpg');
-                opacity: 1;
-            }
-            96% {
                 opacity: 0;
             }
             100% {
-                background-image: url('images/IMG-20251008-WA0001.jpg');
-                opacity: 0;
+                opacity: 1;
             }
         }
         
@@ -493,6 +513,7 @@
     
     <!-- Hero Section -->
     <section class="hero-section flex items-center justify-center text-white mt-16 sm:mt-20">
+        <div class="hero-overlay"></div>
         <div class="text-center px-4 max-w-4xl">
             <h2 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-4 sm:mb-6 tracking-tight leading-tight">
                 ONE COLOR SOLID<br>T-SHIRT
