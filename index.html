@@ -234,7 +234,7 @@
             height: 100%;
             background-size: cover;
             background-position: center;
-            animation: slideshow1 18s infinite;
+            animation: slideshow1 32s infinite;
             z-index: 0;
         }
         
@@ -248,7 +248,7 @@
             height: 100%;
             background-size: cover;
             background-position: center;
-            animation: slideshow2 18s infinite;
+            animation: slideshow2 32s infinite;
             z-index: 1;
         }
         
@@ -268,55 +268,45 @@
             z-index: 3;
         }
         
-        /* Smooth cross-fade animation for layer 1 (bottom) */
+        /* Smooth cross-fade animation for layer 1 (bottom) - 8 images */
         @keyframes slideshow1 {
-            0% {
-                background-image: url('images/IMG-20251008-WA0001.jpg');
-            }
-            33.33% {
-                background-image: url('images/IMG-20251008-WA0001.jpg');
-            }
-            33.34% {
-                background-image: url('images/IMG-20251008-WA0007.jpg');
-            }
-            66.66% {
-                background-image: url('images/IMG-20251008-WA0007.jpg');
-            }
-            66.67% {
-                background-image: url('images/IMG-20251008-WA0015.jpg');
-            }
-            100% {
-                background-image: url('images/IMG-20251008-WA0015.jpg');
-            }
+            0% { background-image: url('images/IMG-20251008-WA0001.jpg'); }
+            12.5% { background-image: url('images/IMG-20251008-WA0001.jpg'); }
+            12.51% { background-image: url('images/IMG-20251008-WA0003.jpg'); }
+            25% { background-image: url('images/IMG-20251008-WA0003.jpg'); }
+            25.01% { background-image: url('images/IMG-20251008-WA0007.jpg'); }
+            37.5% { background-image: url('images/IMG-20251008-WA0007.jpg'); }
+            37.51% { background-image: url('images/IMG-20251008-WA0009.jpg'); }
+            50% { background-image: url('images/IMG-20251008-WA0009.jpg'); }
+            50.01% { background-image: url('images/IMG-20251008-WA0011.jpg'); }
+            62.5% { background-image: url('images/IMG-20251008-WA0011.jpg'); }
+            62.51% { background-image: url('images/IMG-20251008-WA0015.jpg'); }
+            75% { background-image: url('images/IMG-20251008-WA0015.jpg'); }
+            75.01% { background-image: url('images/IMG-20251008-WA0021.jpg'); }
+            87.5% { background-image: url('images/IMG-20251008-WA0021.jpg'); }
+            87.51% { background-image: url('images/IMG-20251008-WA0025.jpg'); }
+            100% { background-image: url('images/IMG-20251008-WA0025.jpg'); }
         }
         
-        /* Smooth cross-fade animation for layer 2 (top) - offset timing */
+        /* Smooth cross-fade animation for layer 2 (top) - offset timing for smooth transitions */
         @keyframes slideshow2 {
-            0% {
-                background-image: url('images/IMG-20251008-WA0015.jpg');
-                opacity: 0;
-            }
-            30% {
-                background-image: url('images/IMG-20251008-WA0015.jpg');
-                opacity: 0;
-            }
-            33.33% {
-                opacity: 1;
-            }
-            63.33% {
-                background-image: url('images/IMG-20251008-WA0001.jpg');
-                opacity: 1;
-            }
-            66.66% {
-                opacity: 0;
-            }
-            96.66% {
-                background-image: url('images/IMG-20251008-WA0007.jpg');
-                opacity: 0;
-            }
-            100% {
-                opacity: 1;
-            }
+            0% { background-image: url('images/IMG-20251008-WA0025.jpg'); opacity: 0; }
+            10% { background-image: url('images/IMG-20251008-WA0025.jpg'); opacity: 0; }
+            12.5% { opacity: 1; }
+            22.5% { background-image: url('images/IMG-20251008-WA0001.jpg'); opacity: 1; }
+            25% { opacity: 0; }
+            35% { background-image: url('images/IMG-20251008-WA0003.jpg'); opacity: 0; }
+            37.5% { opacity: 1; }
+            47.5% { background-image: url('images/IMG-20251008-WA0007.jpg'); opacity: 1; }
+            50% { opacity: 0; }
+            60% { background-image: url('images/IMG-20251008-WA0009.jpg'); opacity: 0; }
+            62.5% { opacity: 1; }
+            72.5% { background-image: url('images/IMG-20251008-WA0011.jpg'); opacity: 1; }
+            75% { opacity: 0; }
+            85% { background-image: url('images/IMG-20251008-WA0015.jpg'); opacity: 0; }
+            87.5% { opacity: 1; }
+            97.5% { background-image: url('images/IMG-20251008-WA0021.jpg'); opacity: 1; }
+            100% { opacity: 0; }
         }
         
         @media (min-width: 640px) {
@@ -645,95 +635,6 @@
         </div>
     </section>
     
-    <!-- Why Choose Us Section -->
-    <section class="py-16 sm:py-20 lg:py-24 bg-gray-900 text-white">
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-12 sm:mb-16">
-                <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-6">
-                    Why Choose Us?
-                </h2>
-                <div class="w-20 h-1 bg-white mx-auto mb-6"></div>
-            </div>
-            
-            <div class="grid md:grid-cols-3 gap-8 sm:gap-12 max-w-5xl mx-auto">
-                <div class="text-center">
-                    <div class="text-5xl mb-4">🚚</div>
-                    <h3 class="text-xl sm:text-2xl font-bold mb-3">Fast Delivery</h3>
-                    <p class="text-gray-300 leading-relaxed">
-                        Quick and reliable shipping to your doorstep. Track your order every step of the way.
-                    </p>
-                </div>
-                
-                <div class="text-center">
-                    <div class="text-5xl mb-4">💬</div>
-                    <h3 class="text-xl sm:text-2xl font-bold mb-3">Easy Ordering</h3>
-                    <p class="text-gray-300 leading-relaxed">
-                        Order directly through Facebook Messenger. Simple, secure, and convenient.
-                    </p>
-                </div>
-                
-                <div class="text-center">
-                    <div class="text-5xl mb-4">🔄</div>
-                    <h3 class="text-xl sm:text-2xl font-bold mb-3">Easy Returns</h3>
-                    <p class="text-gray-300 leading-relaxed">
-                        Not satisfied? We offer hassle-free returns and exchanges for your peace of mind.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <!-- Brand Story Section -->
-    <section id="about" class="py-16 sm:py-20 lg:py-24 bg-gray-50">
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="max-w-4xl mx-auto">
-                <div class="text-center mb-12 sm:mb-16">
-                    <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-                        About Our Brand
-                    </h2>
-                    <div class="section-divider w-20 h-1 mx-auto mb-6"></div>
-                    <p class="text-lg sm:text-xl text-gray-600 leading-relaxed max-w-2xl mx-auto">
-                        Crafting comfortable, high-quality solid color t-shirts for everyday wear
-                    </p>
-                </div>
-                
-                <div class="grid md:grid-cols-2 gap-6 sm:gap-8 mb-12">
-                    <div class="feature-card bg-white p-6 sm:p-8 rounded-xl shadow-sm">
-                        <div class="text-4xl sm:text-5xl mb-4">👕</div>
-                        <h3 class="text-xl sm:text-2xl font-bold text-gray-900 mb-3">Premium Quality</h3>
-                        <p class="text-gray-600 leading-relaxed">
-                            We use only the finest cotton fabrics to ensure maximum comfort and durability. Every t-shirt is crafted with attention to detail and quality that lasts.
-                        </p>
-                    </div>
-                    
-                    <div class="feature-card bg-white p-6 sm:p-8 rounded-xl shadow-sm">
-                        <div class="text-4xl sm:text-5xl mb-4">🎨</div>
-                        <h3 class="text-xl sm:text-2xl font-bold text-gray-900 mb-3">Solid Colors</h3>
-                        <p class="text-gray-600 leading-relaxed">
-                            Our collection features a wide range of solid colors, perfect for any occasion. From classic blacks and whites to vibrant hues that express your personality.
-                        </p>
-                    </div>
-                    
-                    <div class="feature-card bg-white p-6 sm:p-8 rounded-xl shadow-sm">
-                        <div class="text-4xl sm:text-5xl mb-4">✨</div>
-                        <h3 class="text-xl sm:text-2xl font-bold text-gray-900 mb-3">Comfortable Fit</h3>
-                        <p class="text-gray-600 leading-relaxed">
-                            Designed for all-day comfort with a perfect fit that moves with you. Our t-shirts are soft, breathable, and ideal for any activity.
-                        </p>
-                    </div>
-                    
-                    <div class="feature-card bg-white p-6 sm:p-8 rounded-xl shadow-sm">
-                        <div class="text-4xl sm:text-5xl mb-4">💯</div>
-                        <h3 class="text-xl sm:text-2xl font-bold text-gray-900 mb-3">Affordable Luxury</h3>
-                        <p class="text-gray-600 leading-relaxed">
-                            High-quality doesn't have to mean high-price. We offer premium t-shirts at prices that won't break the bank, making style accessible to everyone.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    
     <!-- Product Gallery Section -->
     <section id="collection" class="py-12 sm:py-16 lg:py-20 bg-white">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -998,6 +899,95 @@
                     </a>
                 </div>
                 
+            </div>
+        </div>
+    </section>
+    
+    <!-- Why Choose Us Section -->
+    <section class="py-16 sm:py-20 lg:py-24 bg-gray-900 text-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12 sm:mb-16">
+                <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-6">
+                    Why Choose Us?
+                </h2>
+                <div class="w-20 h-1 bg-white mx-auto mb-6"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8 sm:gap-12 max-w-5xl mx-auto">
+                <div class="text-center">
+                    <div class="text-5xl mb-4">🚚</div>
+                    <h3 class="text-xl sm:text-2xl font-bold mb-3">Fast Delivery</h3>
+                    <p class="text-gray-300 leading-relaxed">
+                        Quick and reliable shipping to your doorstep. Track your order every step of the way.
+                    </p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="text-5xl mb-4">💬</div>
+                    <h3 class="text-xl sm:text-2xl font-bold mb-3">Easy Ordering</h3>
+                    <p class="text-gray-300 leading-relaxed">
+                        Order directly through Facebook Messenger. Simple, secure, and convenient.
+                    </p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="text-5xl mb-4">🔄</div>
+                    <h3 class="text-xl sm:text-2xl font-bold mb-3">Easy Returns</h3>
+                    <p class="text-gray-300 leading-relaxed">
+                        Not satisfied? We offer hassle-free returns and exchanges for your peace of mind.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Brand Story Section -->
+    <section id="about" class="py-16 sm:py-20 lg:py-24 bg-gray-50">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-4xl mx-auto">
+                <div class="text-center mb-12 sm:mb-16">
+                    <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+                        About Our Brand
+                    </h2>
+                    <div class="section-divider w-20 h-1 mx-auto mb-6"></div>
+                    <p class="text-lg sm:text-xl text-gray-600 leading-relaxed max-w-2xl mx-auto">
+                        Crafting comfortable, high-quality solid color t-shirts for everyday wear
+                    </p>
+                </div>
+                
+                <div class="grid md:grid-cols-2 gap-6 sm:gap-8 mb-12">
+                    <div class="feature-card bg-white p-6 sm:p-8 rounded-xl shadow-sm">
+                        <div class="text-4xl sm:text-5xl mb-4">👕</div>
+                        <h3 class="text-xl sm:text-2xl font-bold text-gray-900 mb-3">Premium Quality</h3>
+                        <p class="text-gray-600 leading-relaxed">
+                            We use only the finest cotton fabrics to ensure maximum comfort and durability. Every t-shirt is crafted with attention to detail and quality that lasts.
+                        </p>
+                    </div>
+                    
+                    <div class="feature-card bg-white p-6 sm:p-8 rounded-xl shadow-sm">
+                        <div class="text-4xl sm:text-5xl mb-4">🎨</div>
+                        <h3 class="text-xl sm:text-2xl font-bold text-gray-900 mb-3">Solid Colors</h3>
+                        <p class="text-gray-600 leading-relaxed">
+                            Our collection features a wide range of solid colors, perfect for any occasion. From classic blacks and whites to vibrant hues that express your personality.
+                        </p>
+                    </div>
+                    
+                    <div class="feature-card bg-white p-6 sm:p-8 rounded-xl shadow-sm">
+                        <div class="text-4xl sm:text-5xl mb-4">✨</div>
+                        <h3 class="text-xl sm:text-2xl font-bold text-gray-900 mb-3">Comfortable Fit</h3>
+                        <p class="text-gray-600 leading-relaxed">
+                            Designed for all-day comfort with a perfect fit that moves with you. Our t-shirts are soft, breathable, and ideal for any activity.
+                        </p>
+                    </div>
+                    
+                    <div class="feature-card bg-white p-6 sm:p-8 rounded-xl shadow-sm">
+                        <div class="text-4xl sm:text-5xl mb-4">💯</div>
+                        <h3 class="text-xl sm:text-2xl font-bold text-gray-900 mb-3">Affordable Luxury</h3>
+                        <p class="text-gray-600 leading-relaxed">
+                            High-quality doesn't have to mean high-price. We offer premium t-shirts at prices that won't break the bank, making style accessible to everyone.
+                        </p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
