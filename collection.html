@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Browse our complete collection of premium solid color t-shirts. 18 unique styles in various colors. High-quality cotton, comfortable fit, affordable luxury.">
+    <meta name="keywords" content="t-shirt collection, buy t-shirts online, solid color tees, cotton t-shirts, Bangladesh">
+    <meta name="author" content="One Color Solid T-Shirt">
+    <meta name="theme-color" content="#ffffff">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Collection - One Color Solid T-Shirt">
+    <meta property="og:description" content="Explore our full range of premium quality solid color t-shirts. Each design crafted for comfort and style.">
+    <meta property="og:image" content="images/53535.png">
+    
+    <!-- Performance optimizations -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdn.tailwindcss.com">
+    <link rel="dns-prefetch" href="https://www.facebook.com">
+    
+    <title>Collection - One Color Solid T-Shirt</title>
+    <link rel="icon" type="image/png" href="images/53535.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        
+        * {
+            font-family: 'Inter', sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            overflow-x: hidden;
+        }
+        
+        /* Header shadow on scroll - enhanced */
+        .header-shadow {
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            backdrop-filter: blur(10px);
+            background-color: rgba(255, 255, 255, 0.98);
+        }
+        
+        /* Logo styling - improved */
+        .brand-logo {
+            height: 45px;
+            width: 45px;
+            object-fit: contain;
+            transition: transform 0.3s ease;
+        }
+        
+        .brand-logo:hover {
+            transform: scale(1.05);
+        }
+        
+        @media (min-width: 640px) {
+            .brand-logo {
+                height: 55px;
+                width: 55px;
+            }
+        }
+        
+        /* Navigation enhancements */
+        .nav-link {
+            position: relative;
+            transition: color 0.3s ease;
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: #111827;
+            transition: width 0.3s ease;
+        }
+        
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        
+        .nav-link.active {
+            font-weight: 600;
+        }
+        
+        .nav-link.active::after {
+            width: 100%;
+        }
+        
+        /* Product card - enhanced business look */
+        .product-card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+        }
+        
+        @media (hover: hover) and (pointer: fine) {
+            .product-card:hover {
+                transform: translateY(-8px);
+                box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
+            }
+        }
+        
+        /* Product image container - optimized */
+        .product-image-container {
+            position: relative;
+            overflow: hidden;
+            aspect-ratio: 3/4;
+            background-color: #f5f5f5;
+            border-radius: 0;
+        }
+        
+        .product-image-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .product-image-back {
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0;
+        }
+        
+        /* Desktop hover effect - enhanced */
+        @media (hover: hover) and (pointer: fine) {
+            .product-card:hover .product-image-back {
+                opacity: 1;
+            }
+            
+            .product-card:hover .product-image-front {
+                opacity: 0;
+                transform: scale(1.05);
+            }
+            
+            .product-card:hover .product-image-back {
+                transform: scale(1.05);
+            }
+        }
+        
+        /* Mobile tap effect */
+        @media (hover: none) and (pointer: coarse) {
+            .product-card:active .product-image-back {
+                opacity: 1;
+            }
+            
+            .product-card:active .product-image-front {
+                opacity: 0;
+            }
+        }
+        
+        /* Product info padding */
+        .product-info {
+            padding: 1rem;
+        }
+        
+        @media (min-width: 640px) {
+            .product-info {
+                padding: 1.25rem;
+            }
+        }
+        
+        /* Button hover effects - enhanced */
+        .btn-order {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .btn-order:hover {
+            background-color: #1877f2;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(24, 119, 242, 0.3);
+        }
+        
+        .btn-order:active {
+            transform: translateY(0);
+        }
+        
+        /* Mobile menu optimization */
+        .mobile-nav {
+            display: flex;
+            gap: 1rem;
+        }
+        
+        @media (max-width: 640px) {
+            .mobile-nav {
+                gap: 0.5rem;
+            }
+            
+            .mobile-nav a {
+                font-size: 0.813rem;
+                padding: 0.5rem 0.75rem;
+            }
+        }
+        
+        /* Responsive container improvements */
+        .container {
+            max-width: 1400px;
+        }
+        
+        /* Top contact bar styling */
+        .top-contact-bar {
+            background: linear-gradient(90deg, #f9fafb 0%, #ffffff 100%);
+        }
+        
+        /* Footer enhancements */
+        footer {
+            background: linear-gradient(180deg, #111827 0%, #1f2937 100%);
+        }
+        
+        /* Icon styling */
+        .icon-link {
+            transition: all 0.3s ease;
+        }
+        
+        .icon-link:hover {
+            transform: translateY(-2px);
+        }
+        
+        /* Divider styling */
+        .section-divider {
+            background: linear-gradient(90deg, transparent 0%, #111827 50%, transparent 100%);
+        }
+    </style>
+</head>
+<body class="bg-white">
+    
+    <!-- Header (Sticky) -->
+    <header id="header" class="fixed top-0 left-0 right-0 bg-white z-50 transition-all duration-300 border-b border-gray-200">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Top Bar - Contact Info (Hidden on Mobile) -->
+            <div class="top-contact-bar hidden md:flex items-center justify-between py-2 text-xs text-gray-600 border-b border-gray-100">
+                <div class="flex items-center space-x-4">
+                    <a href="tel:+8801535771254" class="icon-link hover:text-gray-900 transition-colors">
+                        📞 +880 1535-771254
+                    </a>
+                    <span class="text-gray-300">|</span>
+                    <a href="mailto:businessxplatform678@gmail.com" class="icon-link hover:text-gray-900 transition-colors">
+                        ✉️ businessxplatform678@gmail.com
+                    </a>
+                </div>
+                <div class="flex items-center space-x-3">
+                    <a href="https://www.facebook.com/share/1D9bpRWD8b/" target="_blank" rel="noopener noreferrer" class="icon-link hover:text-blue-600 transition-colors">
+                        Follow us on Facebook
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Main Navigation -->
+            <div class="flex items-center justify-between py-3 sm:py-4">
+                <a href="index.html" class="flex items-center space-x-3 sm:space-x-4 group">
+                    <img src="images/53535.png" alt="One Color Solid T-Shirt Logo" class="brand-logo" width="55" height="55">
+                    <div>
+                        <h1 class="text-base sm:text-lg md:text-xl font-bold text-gray-900 group-hover:text-gray-700 transition-colors">One Color Solid T-Shirt</h1>
+                        <p class="text-xs text-gray-600 hidden sm:block">Clothing Brand</p>
+                    </div>
+                </a>
+                <nav class="mobile-nav" aria-label="Main navigation">
+                    <a href="index.html" class="nav-link text-gray-700 hover:text-gray-900 font-medium transition-colors">Home</a>
+                    <a href="collection.html" class="nav-link active text-gray-900 font-medium transition-colors">Collection</a>
+                    <a href="index.html#about" class="nav-link text-gray-700 hover:text-gray-900 font-medium transition-colors">About</a>
+                    <a href="#contact" class="nav-link text-gray-700 hover:text-gray-900 font-medium transition-colors">Contact</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+    
+    <!-- Collection Section -->
+    <section class="py-24 sm:py-28 lg:py-32 bg-white mt-16 sm:mt-20">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12 sm:mb-16">
+                <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+                    Our Complete Collection
+                </h2>
+                <div class="section-divider w-20 h-1 mx-auto mb-6"></div>
+                <p class="text-lg sm:text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed">
+                    Explore our full range of premium quality solid color t-shirts. Each design crafted for comfort and style.
+                </p>
+            </div>
+            
+            <!-- Product Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 sm:gap-8">
+                
+                <!-- Product 1 -->
+                <div class="product-card group">
+                    <div class="product-image-container">
+                        <img src="images/IMG-20251008-WA0001.jpg" alt="Premium T-Shirt Color 1" class="product-image-front"  width="400" height="533">
+                        <img src="images/IMG-20251008-WA0002.jpg" alt="Premium T-Shirt Color 1 Back" class="product-image-back"  width="400" height="533">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="text-base sm:text-lg font-semibold text-gray-900 mb-2 text-center">Premium Solid Tee</h3>
+                        <p class="text-sm text-gray-600 text-center mb-3">100% Cotton</p>
+                        <a href="https://www.facebook.com/messages/t/2103983903221275" target="_blank" rel="noopener noreferrer" class="btn-order block text-center bg-gray-900 text-white px-4 py-2 sm:py-3 rounded-lg text-sm sm:text-base font-medium">
+                            Order Now
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Product 2 -->
+                <div class="product-card group">
+                    <div class="product-image-container">
+                        <img src="images/IMG-20251008-WA0003.jpg" alt="Premium T-Shirt Color 2" class="product-image-front"  width="400" height="533">
+                        <img src="images/IMG-20251008-WA0005.jpg" alt="Premium T-Shirt Color 2 Back" class="product-image-back"  width="400" height="533">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="text-base sm:text-lg font-semibold text-gray-900 mb-2 text-center">Classic Comfort Tee</h3>
+                        <p class="text-sm text-gray-600 text-center mb-3">Premium Cotton</p>
+                        <a href="https://www.facebook.com/messages/t/2103983903221275" target="_blank" rel="noopener noreferrer" class="btn-order block text-center bg-gray-900 text-white px-4 py-2 sm:py-3 rounded-lg text-sm sm:text-base font-medium">
+                            Order Now
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Product 3 -->
+                <div class="product-card group">
+                    <div class="product-image-container">
+                        <img src="images/IMG-20251008-WA0007.jpg" alt="Premium T-Shirt Color 3" class="product-image-front" loading="lazy" width="400" height="533">
+                        <img src="images/IMG-20251008-WA0008.jpg" alt="Premium T-Shirt Color 3 Back" class="product-image-back" loading="lazy" width="400" height="533">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="text-base sm:text-lg font-semibold text-gray-900 mb-2 text-center">Everyday Essential</h3>
+                        <p class="text-sm text-gray-600 text-center mb-3">Soft & Durable</p>
+                        <a href="https://www.facebook.com/messages/t/2103983903221275" target="_blank" rel="noopener noreferrer" class="btn-order block text-center bg-gray-900 text-white px-4 py-2 sm:py-3 rounded-lg text-sm sm:text-base font-medium">
+                            Order Now
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Product 4 -->
+                <div class="product-card group">
+                    <div class="product-image-container">
+                        <img src="images/IMG-20251008-WA0009.jpg" alt="Premium T-Shirt Color 4" class="product-image-front">
+                        <img src="images/IMG-20251008-WA0010.jpg" alt="Premium T-Shirt Color 4 Back" class="product-image-back">
+                    </div>
+                    <h3 class="text-base sm:text-lg font-semibold text-gray-900 mb-2 text-center">Signature Series</h3>
+                    <p class="text-sm text-gray-600 text-center mb-3">Premium Quality</p>
+                    <a href="https://www.facebook.com/messages/t/2103983903221275" target="_blank" rel="noopener noreferrer" class="btn-order block text-center bg-gray-900 text-white px-4 py-2 sm:py-3 rounded-lg text-sm sm:text-base font-medium">
+                        Order Now
+                    </a>
+                </div>
+                
+                <!-- Product 5 -->
+                <div class="product-card group">
+                    <div class="product-image-container">
+                        <img src="images/IMG-20251008-WA0011.jpg" alt="Premium T-Shirt Color 5" class="product-image-front">
+                        <img src="images/IMG-20251008-WA0012.jpg" alt="Premium T-Shirt Color 5 Back" class="product-image-back">
+                    </div>
+                    <h3 class="text-base sm:text-lg font-semibold text-gray-900 mb-2 text-center">Urban Style Tee</h3>
+                    <p class="text-sm text-gray-600 text-center mb-3">Contemporary Fit</p>
+                    <a href="https://www.facebook.com/messages/t/2103983903221275" target="_blank" rel="noopener noreferrer" class="btn-order block text-center bg-gray-900 text-white px-4 py-2 sm:py-3 rounded-lg text-sm sm:text-base font-medium">
+                        Order Now
+                    </a>
+                </div>
+                
+                <!-- Product 6 -->
+                <div class="product-card group">
+                    <div class="product-image-container">
+                        <img src="images/IMG-20251008-WA0013.jpg" alt="Premium T-Shirt Color 6" class="product-image-front">
+                        <img src="images/IMG-20251008-WA0014.jpg" alt="Premium T-Shirt Color 6 Back" class="product-image-back">
+                    </div>
+                    <h3 class="text-base sm:text-lg font-semibold text-gray-900 mb-2 text-center">Lifestyle Collection</h3>
+                    <p class="text-sm text-gray-600 text-center mb-3">All-Day Comfort</p>
+                    <a href="https://www.facebook.com/messages/t/2103983903221275" target="_blank" rel="noopener noreferrer" class="btn-order block text-center bg-gray-900 text-white px-4 py-2 sm:py-3 rounded-lg text-sm sm:text-base font-medium">
+                        Order Now
+                    </a>
+                </div>
+                
+                <!-- Product 7 -->
+                <div class="product-card group">
+                    <div class="product-image-container">
+                        <img src="images/IMG-20251008-WA0015.jpg" alt="Premium T-Shirt Color 7" class="product-image-front">
+                        <img src="images/IMG-20251008-WA0016.jpg" alt="Premium T-Shirt Color 7 Back" class="product-image-back">
+                    </div>
+                    <h3 class="text-base sm:text-lg font-semibold text-gray-900 mb-2 text-center">Heritage Tee</h3>
+                    <p class="text-sm text-gray-600 text-center mb-3">Classic Design</p>
+                    <a href="https://www.facebook.com/messages/t/2103983903221275" target="_blank" rel="noopener noreferrer" class="btn-order block text-center bg-gray-900 text-white px-4 py-2 sm:py-3 rounded-lg text-sm sm:text-base font-medium">
+                        Order Now
+                    </a>
+                </div>
+                
+                <!-- Product 8 -->
+                <div class="product-card group">
+                    <div class="product-image-container">
+                        <img src="images/IMG-20251008-WA0017.jpg" alt="Premium T-Shirt Color 8" class="product-image-front">
+                        <img src="images/IMG-20251008-WA0018.jpg" alt="Premium T-Shirt Color 8 Back" class="product-image-back">
+                    </div>
+                    <h3 class="text-base sm:text-lg font-semibold text-gray-900 mb-2 text-center">Modern Basics</h3>
+                    <p class="text-sm text-gray-600 text-center mb-3">Essential Wear</p>
+                    <a href="https://www.facebook.com/messages/t/2103983903221275" target="_blank" rel="noopener noreferrer" class="btn-order block text-center bg-gray-900 text-white px-4 py-2 sm:py-3 rounded-lg text-sm sm:text-base font-medium">
+                        Order Now
+                    </a>
+                </div>
+                
+                <!-- Product 9 -->
+                <div class="product-card group">
+                    <div class="product-image-container">
+                        <img src="images/IMG-20251008-WA0019.jpg" alt="Premium T-Shirt Color 9" class="product-image-front">
+                        <img src="images/IMG-20251008-WA0020.jpg" alt="Premium T-Shirt Color 9 Back" class="product-image-back">
+                    </div>
+                    <h3 class="text-base sm:text-lg font-semibold text-gray-900 mb-2 text-center">Sport Casual</h3>
+                    <p class="text-sm text-gray-600 text-center mb-3">Active Lifestyle</p>
+                    <a href="https://www.facebook.com/messages/t/2103983903221275" target="_blank" rel="noopener noreferrer" class="btn-order block text-center bg-gray-900 text-white px-4 py-2 sm:py-3 rounded-lg text-sm sm:text-base font-medium">
+                        Order Now
+                    </a>
+                </div>
+                
+                <!-- Product 10 -->
+                <div class="product-card group">
+                    <div class="product-image-container">
+                        <img src="images/IMG-20251008-WA0021.jpg" alt="Premium T-Shirt Color 10" class="product-image-front">
+                        <img src="images/IMG-20251008-WA0022.jpg" alt="Premium T-Shirt Color 10 Back" class="product-image-back">
+                    </div>
+                    <h3 class="text-base sm:text-lg font-semibold text-gray-900 mb-2 text-center">Fresh Style</h3>
+                    <p class="text-sm text-gray-600 text-center mb-3">New Arrival</p>
+                    <a href="https://www.facebook.com/messages/t/2103983903221275" target="_blank" rel="noopener noreferrer" class="btn-order block text-center bg-gray-900 text-white px-4 py-2 sm:py-3 rounded-lg text-sm sm:text-base font-medium">
+                        Order Now
+                    </a>
+                </div>
+                
+                <!-- Product 11 -->
+                <div class="product-card group">
+                    <div class="product-image-container">
+                        <img src="images/IMG-20251008-WA0023.jpg" alt="Premium T-Shirt Color 11" class="product-image-front">
+                        <img src="images/IMG-20251008-WA0024.jpg" alt="Premium T-Shirt Color 11 Back" class="product-image-back">
+                    </div>
+                    <h3 class="text-base sm:text-lg font-semibold text-gray-900 mb-2 text-center">Minimalist Tee</h3>
+                    <p class="text-sm text-gray-600 text-center mb-3">Simple Elegance</p>
+                    <a href="https://www.facebook.com/messages/t/2103983903221275" target="_blank" rel="noopener noreferrer" class="btn-order block text-center bg-gray-900 text-white px-4 py-2 sm:py-3 rounded-lg text-sm sm:text-base font-medium">
+                        Order Now
+                    </a>
+                </div>
+                
+                <!-- Product 12 -->
+                <div class="product-card group">
+                    <div class="product-image-container">
+                        <img src="images/IMG-20251008-WA0025.jpg" alt="Premium T-Shirt Color 12" class="product-image-front">
+                        <img src="images/IMG-20251008-WA0026.jpg" alt="Premium T-Shirt Color 12 Back" class="product-image-back">
+                    </div>
+                    <h3 class="text-base sm:text-lg font-semibold text-gray-900 mb-2 text-center">Core Collection</h3>
+                    <p class="text-sm text-gray-600 text-center mb-3">Wardrobe Essential</p>
+                    <a href="https://www.facebook.com/messages/t/2103983903221275" target="_blank" rel="noopener noreferrer" class="btn-order block text-center bg-gray-900 text-white px-4 py-2 sm:py-3 rounded-lg text-sm sm:text-base font-medium">
+                        Order Now
+                    </a>
+                </div>
+                
+                <!-- Product 13 -->
+                <div class="product-card group">
+                    <div class="product-image-container">
+                        <img src="images/IMG-20251008-WA0027.jpg" alt="Premium T-Shirt Color 13" class="product-image-front">
+                        <img src="images/IMG-20251008-WA0028.jpg" alt="Premium T-Shirt Color 13 Back" class="product-image-back">
+                    </div>
+                    <h3 class="text-base sm:text-lg font-semibold text-gray-900 mb-2 text-center">Street Essentials</h3>
+                    <p class="text-sm text-gray-600 text-center mb-3">Urban Comfort</p>
+                    <a href="https://www.facebook.com/messages/t/2103983903221275" target="_blank" rel="noopener noreferrer" class="btn-order block text-center bg-gray-900 text-white px-4 py-2 sm:py-3 rounded-lg text-sm sm:text-base font-medium">
+                        Order Now
+                    </a>
+                </div>
+                
+                <!-- Product 14 -->
+                <div class="product-card group">
+                    <div class="product-image-container">
+                        <img src="images/IMG-20251008-WA0029.jpg" alt="Premium T-Shirt Color 14" class="product-image-front">
+                        <img src="images/IMG-20251008-WA0030.jpg" alt="Premium T-Shirt Color 14 Back" class="product-image-back">
+                    </div>
+                    <h3 class="text-base sm:text-lg font-semibold text-gray-900 mb-2 text-center">Vintage Vibes</h3>
+                    <p class="text-sm text-gray-600 text-center mb-3">Retro Style</p>
+                    <a href="https://www.facebook.com/messages/t/2103983903221275" target="_blank" rel="noopener noreferrer" class="btn-order block text-center bg-gray-900 text-white px-4 py-2 sm:py-3 rounded-lg text-sm sm:text-base font-medium">
+                        Order Now
+                    </a>
+                </div>
+                
+                <!-- Product 15 -->
+                <div class="product-card group">
+                    <div class="product-image-container">
+                        <img src="images/IMG-20251008-WA0031.jpg" alt="Premium T-Shirt Color 15" class="product-image-front">
+                        <img src="images/IMG-20251008-WA0032.jpg" alt="Premium T-Shirt Color 15 Back" class="product-image-back">
+                    </div>
+                    <h3 class="text-base sm:text-lg font-semibold text-gray-900 mb-2 text-center">Bright Basics</h3>
+                    <p class="text-sm text-gray-600 text-center mb-3">Vibrant Colors</p>
+                    <a href="https://www.facebook.com/messages/t/2103983903221275" target="_blank" rel="noopener noreferrer" class="btn-order block text-center bg-gray-900 text-white px-4 py-2 sm:py-3 rounded-lg text-sm sm:text-base font-medium">
+                        Order Now
+                    </a>
+                </div>
+                
+                <!-- Product 16 -->
+                <div class="product-card group">
+                    <div class="product-image-container">
+                        <img src="images/IMG-20251008-WA0033.jpg" alt="Premium T-Shirt Color 16" class="product-image-front">
+                        <img src="images/IMG-20251008-WA0034.jpg" alt="Premium T-Shirt Color 16 Back" class="product-image-back">
+                    </div>
+                    <h3 class="text-base sm:text-lg font-semibold text-gray-900 mb-2 text-center">Neutral Tones</h3>
+                    <p class="text-sm text-gray-600 text-center mb-3">Versatile Style</p>
+                    <a href="https://www.facebook.com/messages/t/2103983903221275" target="_blank" rel="noopener noreferrer" class="btn-order block text-center bg-gray-900 text-white px-4 py-2 sm:py-3 rounded-lg text-sm sm:text-base font-medium">
+                        Order Now
+                    </a>
+                </div>
+                
+                <!-- Product 17 -->
+                <div class="product-card group">
+                    <div class="product-image-container">
+                        <img src="images/IMG-20251008-WA0035.jpg" alt="Premium T-Shirt Color 17" class="product-image-front">
+                        <img src="images/IMG-20251008-WA0036.jpg" alt="Premium T-Shirt Color 17 Back" class="product-image-back">
+                    </div>
+                    <h3 class="text-base sm:text-lg font-semibold text-gray-900 mb-2 text-center">Bold Statement</h3>
+                    <p class="text-sm text-gray-600 text-center mb-3">Stand Out</p>
+                    <a href="https://www.facebook.com/messages/t/2103983903221275" target="_blank" rel="noopener noreferrer" class="btn-order block text-center bg-gray-900 text-white px-4 py-2 sm:py-3 rounded-lg text-sm sm:text-base font-medium">
+                        Order Now
+                    </a>
+                </div>
+                
+                <!-- Product 18 -->
+                <div class="product-card group">
+                    <div class="product-image-container">
+                        <img src="images/IMG-20251008-WA0037.jpg" alt="Premium T-Shirt Color 18" class="product-image-front">
+                        <img src="images/IMG-20251008-WA0038.jpg" alt="Premium T-Shirt Color 18 Back" class="product-image-back">
+                    </div>
+                    <h3 class="text-base sm:text-lg font-semibold text-gray-900 mb-2 text-center">Limited Edition</h3>
+                    <p class="text-sm text-gray-600 text-center mb-3">Exclusive Design</p>
+                    <a href="https://www.facebook.com/messages/t/2103983903221275" target="_blank" rel="noopener noreferrer" class="btn-order block text-center bg-gray-900 text-white px-4 py-2 sm:py-3 rounded-lg text-sm sm:text-base font-medium">
+                        Order Now
+                    </a>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+    
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 sm:py-20 lg:py-24 bg-gray-50">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+                    Get In Touch
+                </h2>
+                <div class="w-20 h-1 bg-gray-900 mx-auto mb-6"></div>
+                <p class="text-lg sm:text-xl text-gray-600 mb-8">
+                    Have questions? We're here to help!
+                </p>
+                <a href="https://www.facebook.com/messages/t/2103983903221275" target="_blank" class="inline-block bg-blue-600 text-white px-8 sm:px-12 py-3 sm:py-4 rounded-lg text-base sm:text-lg font-semibold hover:bg-blue-700 transition-colors">
+                    Message Us on Facebook
+                </a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12 sm:py-16">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+                
+                <!-- Company Info -->
+                <div>
+                    <div class="flex items-center space-x-3 mb-4">
+                        <img src="images/53535.png" alt="Logo" class="w-10 h-10">
+                        <h3 class="text-xl font-bold">One Color Solid T-Shirt</h3>
+                    </div>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        Premium quality solid color t-shirts for everyday comfort and style.
+                    </p>
+                </div>
+                
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="index.html" class="hover:text-white transition-colors">Home</a></li>
+                        <li><a href="collection.html" class="hover:text-white transition-colors">Shop Page</a></li>
+                        <li><a href="index.html#about" class="hover:text-white transition-colors">About Us</a></li>
+                        <li><a href="#contact" class="hover:text-white transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Customer Service -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Customer Service</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="https://www.facebook.com/messages/t/2103983903221275" target="_blank" class="hover:text-white transition-colors">Order via Messenger</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Shipping Info</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Returns Policy</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Size Guide</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Contact Info -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Contact Us</h4>
+                    <ul class="space-y-3 text-gray-400 text-sm">
+                        <li class="flex items-start">
+                            <span class="mr-2">📞</span>
+                            <a href="tel:+8801535771254" class="hover:text-white transition-colors">+880 1535-771254</a>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="mr-2">✉️</span>
+                            <a href="mailto:businessxplatform678@gmail.com" class="hover:text-white transition-colors break-all">businessxplatform678@gmail.com</a>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="mr-2">📍</span>
+                            <span>Bangladesh</span>
+                        </li>
+                    </ul>
+                </div>
+                
+            </div>
+            
+            <!-- Social Media & Copyright -->
+            <div class="border-t border-gray-800 pt-8">
+                <div class="flex flex-col sm:flex-row justify-between items-center space-y-4 sm:space-y-0">
+                    <p class="text-gray-400 text-sm text-center sm:text-left">
+                        &copy; 2024 One Color Solid T-Shirt. All rights reserved.
+                    </p>
+                    <div class="flex space-x-6">
+                        <a href="https://www.facebook.com/share/1D9bpRWD8b/" target="_blank" class="text-gray-400 hover:text-white transition-colors">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                            </svg>
+                        </a>
+                        <a href="#" target="_blank" class="text-gray-400 hover:text-white transition-colors">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                            </svg>
+                        </a>
+                        <a href="#" target="_blank" class="text-gray-400 hover:text-white transition-colors">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-5.2 1.74 2.89 2.89 0 012.31-4.64 2.93 2.93 0 01.88.13V9.4a6.84 6.84 0 00-1-.05A6.33 6.33 0 005 20.1a6.34 6.34 0 0010.86-4.43v-7a8.16 8.16 0 004.77 1.52v-3.4a4.85 4.85 0 01-1-.1z"/>
+                            </svg>
+                        </a>
+                        <a href="#" target="_blank" class="text-gray-400 hover:text-white transition-colors">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- JavaScript for enhanced UX -->
+    <script>
+        // Header shadow on scroll with throttling
+        let scrolling = false;
+        window.addEventListener('scroll', function() {
+            if (!scrolling) {
+                window.requestAnimationFrame(function() {
+                    const header = document.getElementById('header');
+                    if (window.scrollY > 10) {
+                        header.classList.add('header-shadow');
+                    } else {
+                        header.classList.remove('header-shadow');
+                    }
+                    scrolling = false;
+                });
+                scrolling = true;
+            }
+        });
+        
+        // Lazy load images optimization
+        if ('loading' in HTMLImageElement.prototype) {
+            const images = document.querySelectorAll('img[loading="lazy"]');
+            images.forEach(img => {
+                img.src = img.src;
+            });
+        }
+        
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const href = this.getAttribute('href');
+                if (href !== '#' && href !== '#contact') {
+                    e.preventDefault();
+                    const target = document.querySelector(href);
+                    if (target) {
+                        const offset = 80;
+                        const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - offset;
+                        window.scrollTo({
+                            top: targetPosition,
+                            behavior: 'smooth'
+                        });
+                    }
+                }
+            });
+        });
+        
+        // Performance: Add fade-in animation as products become visible
+        if ('IntersectionObserver' in window) {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, {
+                threshold: 0.1,
+                rootMargin: '50px'
+            });
+            
+            document.querySelectorAll('.product-card').forEach(card => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(20px)';
+                card.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+                observer.observe(card);
+            });
+        }
+    </script>
+    
+</body>
+</html>

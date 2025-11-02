@@ -1,0 +1,79 @@
+# Image Placement Guide
+
+## 📋 Checklist: Images You Need to Add
+
+Place all images in the `images/` folder.
+
+### Hero Section (1 image)
+- [ ] `hero-banner.jpg` - Lifestyle/banner image (recommended size: 1920x600px or larger)
+
+### Product Images - Front Views (8 images)
+- [ ] `black-front.jpg` - Black t-shirt front view
+- [ ] `white-front.jpg` - White t-shirt front view
+- [ ] `navy-front.jpg` - Navy t-shirt front view
+- [ ] `gray-front.jpg` - Gray t-shirt front view
+- [ ] `red-front.jpg` - Red t-shirt front view
+- [ ] `green-front.jpg` - Green t-shirt front view
+- [ ] `blue-front.jpg` - Blue t-shirt front view
+- [ ] `yellow-front.jpg` - Yellow t-shirt front view
+
+### Product Images - Back Views (8 images)
+- [ ] `black-back.jpg` - Black t-shirt back view
+- [ ] `white-back.jpg` - White t-shirt back view
+- [ ] `navy-back.jpg` - Navy t-shirt back view
+- [ ] `gray-back.jpg` - Gray t-shirt back view
+- [ ] `red-back.jpg` - Red t-shirt back view
+- [ ] `green-back.jpg` - Green t-shirt back view
+- [ ] `blue-back.jpg` - Blue t-shirt back view
+- [ ] `yellow-back.jpg` - Yellow t-shirt back view
+
+---
+
+## 📸 Image Guidelines
+
+### Product Photos (Front & Back)
+- **Aspect Ratio**: 3:4 (portrait orientation)
+- **Recommended Size**: 600x800px minimum
+- **Format**: JPG
+- **Background**: Clean, solid color background (white or light gray preferred)
+- **Consistency**: All photos should have similar lighting and styling
+
+### Hero Banner
+- **Aspect Ratio**: 16:9 or similar wide format
+- **Recommended Size**: 1920x600px or larger
+- **Format**: JPG
+- **Content**: Lifestyle image, model wearing t-shirt, or brand visual
+- **Note**: Text will be overlaid on this image, so choose one with good contrast
+
+---
+
+## 🔧 How to Add Images
+
+1. Download your t-shirt photos from Facebook: https://www.facebook.com/share/1D9bpRWD8b/
+2. Rename them according to the list above
+3. Copy/paste them into the `images/` folder
+4. Refresh your browser to see the images on the website
+
+---
+
+## ⚠️ Troubleshooting
+
+**Images not showing?**
+- Check that filenames match exactly (case-sensitive)
+- Verify images are in the correct folder
+- Make sure file extensions are `.jpg` (not `.jpeg`, `.png`, etc.)
+- If using different formats, update the HTML accordingly
+
+**Want to use different colors?**
+- Update the product card in `index.html`
+- Change the image filenames
+- Update the product name text
+
+---
+
+## 💡 Quick Tips
+
+- You can use the same back view image for multiple colors if you don't have individual back shots
+- Consider using a photo editing tool to ensure consistent sizing
+- Compress images for faster loading (use tools like TinyPNG or ImageOptim)
+- Test the hover effect after adding images to ensure smooth transitions
